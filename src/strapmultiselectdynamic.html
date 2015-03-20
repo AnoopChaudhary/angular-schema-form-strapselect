@@ -5,6 +5,7 @@
         };
 
         $scope.init = function(category, name) {
+          console.log('init is called', name);
           $scope.getItem.category = category;
           $scope.getItem.name = name;
         };
@@ -12,7 +13,7 @@
         $scope.items = [];
 
         $scope.fetchResult = function () {
-            $http.post('api/rs', $scope.getItem)
+            $http.post('http://www.networknt.com/api/rs', $scope.getItem)
                     .success(function (result, status, headers, config) {
                         $scope.items = result;
                         console.log('items', $scope.items);

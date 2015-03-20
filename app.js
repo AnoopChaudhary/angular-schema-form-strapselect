@@ -14,7 +14,7 @@ var lightApp = angular.module('lightApp', ['mgcrea.ngStrap', 'schemaForm', 'pasc
     lightApp.factory    = $provide.factory;
     lightApp.service    = $provide.service;
 }])
-.controller('SelectController', function($scope){
+.controller('SelectController', ['$scope', function($scope){
   $scope.schema = {
     type: 'object',
     title: 'Select',
@@ -64,24 +64,24 @@ var lightApp = angular.module('lightApp', ['mgcrea.ngStrap', 'schemaForm', 'pasc
        key: 'multiselect'
      },
      {
-       "key": "selectdynamic",
-       "options": {
-         "category": "forum",
-         "name": "getForumDropdown"
+       key: 'selectdynamic',
+       options: {
+         category: 'demo',
+         name: 'getDropdown'
        }
      },
      {
-       "key": "multiselectdynamic",
-         "options": {
-         "category": "forum",
-         "name": "getForumDropdown"
+       key: 'multiselectdynamic',
+         options: {
+         category: 'demo',
+         name: 'getDropdown'
        }
      },
      {
-       type: "submit",
-       style: "btn-info",
-       title: "OK"
-     },
+       type: 'submit',
+       style: 'btn-info',
+       title: 'OK'
+     }
 
   ];
   $scope.model = {};
@@ -92,4 +92,4 @@ var lightApp = angular.module('lightApp', ['mgcrea.ngStrap', 'schemaForm', 'pasc
     $scope.$broadcast('schemaFormValidate')
     console.log($scope.model);
   };
-});
+}]);
