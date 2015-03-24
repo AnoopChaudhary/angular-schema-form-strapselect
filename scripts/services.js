@@ -180,7 +180,7 @@ angular.module('lightApp')
                 // refresh token command in the request intercpetor.
                 //localStorageService.remove('authorizationData');
                 $http = $http || $injector.get('$http');
-                $http.post('http://www.networknt.com:8080/api/rs', refreshTokenPost).success(function (response) {
+                $http.post('http://www.networknt.com/api/rs', refreshTokenPost).success(function (response) {
                     _authentication.isAuth = true;
                     _authentication.currentUser = JSON.parse(base64.base64Decode(response.accessToken.split('.')[1])).user;
                     _authentication.useRefreuseshTokens = true;
@@ -332,7 +332,7 @@ angular.module('lightApp')
                         try { return new ActiveXObject("Microsoft.XMLHTTP"); } catch (e4) {}
                 };
                 var xhr = new XHR();
-                xhr.open('POST', 'http://www.networknt.com:8080/api/rs', true);
+                xhr.open('POST', 'http://www.networknt.com/api/rs', true);
                 xhr.setRequestHeader('Content-type', 'application/json');
 
                 var error = '{"category": "log", "name": "logEvent", "readOnly":false, "data": {' +
@@ -371,7 +371,7 @@ angular.module('lightApp')
                         try { return new ActiveXObject("Microsoft.XMLHTTP"); } catch (e4) {}
                     };
                 var xhr = new XHR();
-                xhr.open('POST', 'http://www.networknt.com:8080/api/rs', true);
+                xhr.open('POST', 'http://www.networknt.com/api/rs', true);
                 xhr.setRequestHeader('Content-type', 'application/json');
 
                 var error = '{"category": "log", "name": "logEvent", "readOnly":false, "data": {' +
@@ -393,7 +393,7 @@ angular.module('lightApp')
                         try { return new ActiveXObject("Microsoft.XMLHTTP"); } catch (e4) {}
                     };
                 var xhr = new XHR();
-                xhr.open('POST', 'http://www.networknt.com:8080/api/rs', true);
+                xhr.open('POST', 'http://www.networknt.com/api/rs', true);
                 xhr.setRequestHeader('Content-type', 'application/json');
 
                 var error = '{"category": "log", "name": "logEvent", "readOnly":false, "data": {' +

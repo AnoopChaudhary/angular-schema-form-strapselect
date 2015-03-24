@@ -13,7 +13,7 @@
         $scope.items = [];
 
         $scope.fetchResult = function () {
-            $http.post('http://www.networknt.com:8080/api/rs', $scope.getItem)
+            $http.post('http://www.networknt.com/api/rs', $scope.getItem)
                     .success(function (result, status, headers, config) {
                         $scope.items = result;
                         console.log('items', $scope.items);

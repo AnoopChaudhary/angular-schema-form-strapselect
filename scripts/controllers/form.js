@@ -17,7 +17,7 @@ angular.module('lightApp').controller('formCtrl', ['$scope', '$routeParams', '$h
 
     console.log("getFormPost.data", getFormPost.data);
 
-    $http.post('http://www.networknt.com:8080/api/rs', getFormPost)
+    $http.post('http://www.networknt.com/api/rs', getFormPost)
         .success(function(result, status, headers, config) {
             $scope.schema = result.schema;
             console.log('schema = ', $scope.schema);
@@ -46,7 +46,7 @@ angular.module('lightApp').controller('formCtrl', ['$scope', '$routeParams', '$h
         if (form.$valid) {
             $scope.action[$scope.buttonIndex].data = $scope.modelData;
             $scope.action[$scope.buttonIndex].data.parentId = $routeParams.parentId;
-            $http.post('http://www.networknt.com:8080/api/rs', $scope.action[$scope.buttonIndex])
+            $http.post('http://www.networknt.com/api/rs', $scope.action[$scope.buttonIndex])
                 .success(function (data, status, headers, config) {
                     if(angular.isDefined($scope.action[$scope.buttonIndex].success)) {
                         if(angular.isDefined($routeParams.parentId)) {

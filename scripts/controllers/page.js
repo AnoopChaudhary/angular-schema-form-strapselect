@@ -17,7 +17,7 @@ angular.module('lightApp').controller('pageCtrl', ['$scope', '$routeParams', '$h
         }
     };
 
-    $http.post('http://www.networknt.com:8080/api/rs', getPagePost)
+    $http.post('http://www.networknt.com/api/rs', getPagePost)
         .success(function(result, status, headers, config) {
             $scope.html = result.content;
             //console.log($scope.html);

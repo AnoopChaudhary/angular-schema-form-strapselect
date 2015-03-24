@@ -14,7 +14,7 @@ angular.module('lightApp').controller('menuCtrl', ['$scope', '$http', 'authServi
         }
     };
 
-    $http.post('http://www.networknt.com:8080/api/rs', getMenuPost)
+    $http.post('http://www.networknt.com/api/rs', getMenuPost)
         .success(function(result, status, headers, config) {
             $scope.tree = result.out_Own;
 
