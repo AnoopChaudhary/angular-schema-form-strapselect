@@ -1,3 +1,10 @@
+Looking for maintainer
+======================
+I have switched from Angular to React and in a process to convert all my forms to [react-schema-form](https://github.com/networknt/react-schema-form)
+
+It looks like there are still users for this Angular add-on and I am wondering if someone wants to take over the ownership to maintain this module. Thanks.
+
+
 angular-schema-form-strapselect
 ===============================
 
